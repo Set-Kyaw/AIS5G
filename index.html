@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIS5G Internet Packages</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: #4CAF50;
+            padding: 20px;
+        }
+        .package {
+            background: #2E7D32;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            margin: 15px;
+            width: 280px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+            color: white;
+            position: relative;
+        }
+        .package:hover {
+            transform: scale(1.08);
+        }
+        .package h2 {
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            padding: 10px;
+            border-radius: 15px 15px 0 0;
+            font-size: 16px;
+        }
+        .package p strong {
+            font-size: 22px;
+        }
+        .price {
+            font-size: 16px;
+            font-weight: bold;
+            color: #c8e6c9;
+            margin: 10px 0;
+        }
+        .contact-btn {
+            display: block;
+            background: #c8e6c9;
+            color: #1b5e20;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 25px;
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .contact-btn:hover {
+            background: #a5d6a7;
+            color: white;
+        }
+        .speed-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .speed {
+            font-style: italic;
+            text-align: left;
+        }
+        .day {
+            font-weight: bold;
+            font-size: 18px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        const packages = [
+            {day: 1, gb: "1GB", price: 20}, {day: 3, gb: "3GB", price: 40}, {day: 5, gb: "5GB", price: 60}, {day: 7, gb: "7GB", price: 80},
+            {day: 1, gb: "3GB", price: 30}, {day: 3, gb: "5GB", price: 50}, {day: 5, gb: "7GB", price: 80}, {day: 7, gb: "10GB", price: 100},
+            {day: 1, gb: "2Mbps unlimited", price: 20}, {day: 3, gb: "2Mbps unlimited", price: 40}, {day: 5, gb: "2Mbps unlimited", price: 60}, {day: 7, gb: "2Mbps unlimited", price: 80},
+            {day: 1, gb: "5Mbps unlimited", price: 30}, {day: 3, gb: "5Mbps unlimited", price: 60}, {day: 5, gb: "5Mbps unlimited", price: 90}, {day: 7, gb: "5Mbps unlimited", price: 120},
+            {day: 1, gb: "10Mbps unlimited", price: 50}, {day: 3, gb: "10Mbps unlimited", price: 70}, {day: 5, gb: "10Mbps unlimited", price: 120}, {day: 7, gb: "10Mbps unlimited", price: 160},
+            {day: 1, gb: "Unlimited", price: 70}, {day: 3, gb: "Unlimited", price: 100}, {day: 5, gb: "Unlimited", price: 150}, {day: 7, gb: "Unlimited", price: 200}
+        ];
+        
+        packages.forEach(pkg => {
+            document.body.innerHTML += `
+                <div class="package">
+                    <h2>AIS5G Internet</h2>
+                    <p><strong>${pkg.gb}</strong></p>
+                    <p class="price">${pkg.price} Baht</p>
+                    <div class="speed-container">
+                        <p class="speed">${pkg.gb.includes("unlimited") ? "(up to 20-80Mbps)" : "(up to 20-80Mbps)"}</p>
+                        <p class="day">${pkg.day} Day</p>
+                    </div>
+                    <a href="contact.html" class="contact-btn">Contact</a>
+                </div>`;
+        });
+    </script>
+</body>
+</html>
