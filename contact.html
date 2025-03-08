@@ -3,54 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Sales</title>
+    <title>AIS5G Internet Packages</title>
     <style>
-        body {
+      body {
+            padding-top: 50px; /* Adjust based on header height */
             font-family: Arial, sans-serif;
-            background: #4CAF50;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #e8f5e9;
+            padding: 20px;
+            margin: 0;
+}
+
+
+        h1 {
+            color: #2e7d32;
             text-align: center;
-            padding: 20px;
+            margin-bottom: 20px;
         }
+
+        .contact-card a {
+        color: #ffd700; /* Gold color for better visibility */
+        font-weight: bold;
+        }
+
         .contact-card {
-            background: #2E7D32;
-            color: white;
+            background: #46ae49;
+            color: #f1f8e9;
             padding: 20px;
-            margin: 15px auto;
-            width: 80%;
+            margin: 15px;
+            width: 90%;
             max-width: 600px;
             border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 10px rgba(50, 113, 75, 0.3);
             text-align: left;
         }
+
+        .contact-card h2 {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+
+        .contact-card h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #c8e6c9;
+        }
+
+        .contact-card {
+    display: flex;
+    flex-direction: column;
+    align-items: left; /* Centers all content inside */
+    text-align: left;
+}
+
         .map {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    border: 0;
+    display: block; /* Ensures it behaves as a block element */
+    margin: 0 auto; /* Centers it horizontally */
+}
+
+        @media (max-width: 600px) {
+            .map {
+                height: 200px;
+            }
+        }
+
+        /* Scrolling Header */
+        .header {
             width: 100%;
-            height: 200px;
-            border-radius: 10px;
+            background: #4CAF50;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 0;
+            text-align: center;
+            overflow: hidden;
+            white-space: nowrap;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .scrolling-text {
+            display: inline-block;
+            animation: marquee 15s linear infinite;
+        }
+
+        .header:hover .scrolling-text {
+            animation-play-state: paused;
+        }
+
+        @keyframes marquee {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+
+        .footer {
+            width: 100%;
+            background: #4CAF50;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 0;
+            text-align: center;
+            margin-top: 20px;
+      
         }
     </style>
 </head>
 <body>
+    <!-- Scrolling Header -->
+<div class="header">
+    <div class="scrolling-text">
+        AIS5G Internet packages, you can choose the internet packages as you need! Based on GB, Mbps, and unlimited internet.
+    </div>
+</div>
     <h1>Contact Our Sales Team</h1>
 
     <div class="contact-card">
         <h2>ဗေတီး</h2>
-        <p>Phone: +66 1234 5678</p>
-        <p>Email: john@example.com</p>
-        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d680.2459245686312!2d97.97967501529206!3d19.76773215393707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30d017b1f9d25ec9%3A0x472ce3b01a14832d!2sMarket%20Homein!5e1!3m2!1sen!2smy!4v1741294070831!5m2!1sen!2smy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <h4>ဒေါ်ပီရွှေဆိုင်၊ မြို့မဈေးကြီး</h4>
+        <p>Phone: <a href="tel:+66821590328" style="color: #fff;">+66 82 159 0328</a></p>
+        <p>Email: -</p>
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d680.2459245686312!2d97.97967501529206!3d19.76773215393707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30d017b1f9d25ec9%3A0x472ce3b01a14832d!2sMarket%20Homein!5e1!3m2!1sen!2smy!4v1741294070831!5m2!1sen!2smy" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 
     <div class="contact-card">
         <h2>အန်တီငယ်</h2>
-        <p>Phone: +66 8765 4321</p>
-        <p>Email: jane@example.com</p>
-        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d510.19671564503034!2d97.97956313710257!3d19.768042095914637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2smy!4v1741294215454!5m2!1sen!2smy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <h4>အန်တီငယ် ထမင်းဆိုင်၊ မြို့မဈေးကြီးအနီး</h4>
+        <p>Phone: <a href="tel:+66821590328" style="color: #fff;">+66 82 159 0328</a></p>
+        <p>Email: -</p>
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d510.19671564503034!2d97.97956313710257!3d19.768042095914637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2smy!4v1741294215454!5m2!1sen!2smy" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 
     <div class="contact-card">
         <h2>Nang Phwe</h2>
-        <p>Phone: +66 9876 5432</p>
-        <p>Email: michael@example.com</p>
-        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d526.8264112847967!2d97.97942494567079!3d19.76737727540578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2smy!4v1741294407350!5m2!1sen!2smy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <h4>နောင့်ဖွေး သင်္ဘောသီးထောင်းဆိုင်၊ မြို့မဈေးကြီးအနီး</h4>
+        <p>Phone: <a href="tel:+66821590328" style="color: #fff;">+66 82 159 0328</a></p>
+        <p>Email: -</p>
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d526.8264112847967!2d97.97942494567079!3d19.76737727540578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2smy!4v1741294407350!5m2!1sen!2smy" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
+
+    <div class="footer" >
+        &copy; 2025 AIS Network | All Rights Reserved
+    </div>
+
 </body>
 </html>
